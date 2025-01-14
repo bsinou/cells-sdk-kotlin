@@ -1,0 +1,7 @@
+openapi-generator-cli.jar
+.gradle/
+.idea/
+.openapi-generator/
+build/
+bin/
+local.properties
