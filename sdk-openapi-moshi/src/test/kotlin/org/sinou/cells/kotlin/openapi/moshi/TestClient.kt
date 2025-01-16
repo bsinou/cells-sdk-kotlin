@@ -1,6 +1,5 @@
 package org.sinou.cells.kotlin.openapi.moshi
 
-
 import java.security.cert.X509Certificate
 import javax.net.ssl.HostnameVerifier
 import javax.net.ssl.SSLContext
@@ -14,7 +13,7 @@ import okhttp3.Response
 const val SERVER_URL = "https://localhost:8080"
 private const val SKIP_SSL_VERIFICATION = true
 private const val PAT =
-    "MmY33NSwMyPq4ZUlYwZYsKBZhNdpU5ME0aLeuVAt0eU.UNPXXPR53BukQu-uYtv9ZjIydSq45xFRe8cWPJlloc4"
+    "XH73NH3cVH72IB6r9csoJlkQ2OTE4hA5JRgJtmNyOII.Y_Cfkkg75KzzwREwqC75UgX0gOA2bjWCKNexUZ25geU"
 
 private const val USER_AGENT = "org.sinou.cells.kotlin.openapi.moshi/v0.1.1 CellsAPI/v2"
 private const val AUTH_HEADER = "Authorization"

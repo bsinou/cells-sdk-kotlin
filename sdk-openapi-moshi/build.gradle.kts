@@ -1,10 +1,9 @@
-// import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 group = "org.sinou.android.kotlin"
 version = "0.1.1-dev"
 
 tasks.wrapper {
-    gradleVersion = "8.7"
+    gradleVersion = "8.1"
     distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
 }
 
@@ -23,14 +22,12 @@ plugins {
     kotlin("jvm") version "1.9.23"
     id("maven-publish")
     id("com.diffplug.spotless") version "6.25.0"
-    java
 }
 
-// java {
-//     toolchain {
-//         languageVersion.set(JavaLanguageVersion.of(11))
-//     }
-// }
+
+kotlin {
+    jvmToolchain(21)
+}
 
 configure<com.diffplug.gradle.spotless.SpotlessExtension> {
     kotlin {
@@ -43,7 +40,6 @@ configure<com.diffplug.gradle.spotless.SpotlessExtension> {
         indentWithSpaces()
         endWithNewline()
     }
-    // enforceCheck = false
 }
 
 tasks.test {
@@ -53,8 +49,8 @@ tasks.test {
 dependencies {
     implementation ("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.23")
     implementation ("org.jetbrains.kotlin:kotlin-reflect:1.9.23")
-    implementation ("com.squareup.moshi:moshi-kotlin:1.15.1")
-    implementation ("com.squareup.moshi:moshi-adapters:1.15.1")
+    implementation ("com.squareup.moshi:moshi-kotlin:1.15.2")
+    implementation ("com.squareup.moshi:moshi-adapters:1.15.2")
     implementation ("com.squareup.okhttp3:okhttp:4.12.0")
     testImplementation ("io.kotlintest:kotlintest-runner-junit5:3.4.2")
 }
