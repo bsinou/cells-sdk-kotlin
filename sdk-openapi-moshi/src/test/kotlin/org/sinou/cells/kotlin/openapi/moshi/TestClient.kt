@@ -14,9 +14,9 @@ import okhttp3.Response
 const val SERVER_URL = "https://localhost:8080"
 private const val SKIP_SSL_VERIFICATION = true
 private const val PAT =
-    "5BcvrtZUurcE_wnozB3nRoP6Qpg_BEdBiaJounwlWI8.MKW9aVq_1RZx92jwoJ9Q3qPjcjKUjfmWles06kQDUy4"
+    "MmY33NSwMyPq4ZUlYwZYsKBZhNdpU5ME0aLeuVAt0eU.UNPXXPR53BukQu-uYtv9ZjIydSq45xFRe8cWPJlloc4"
 
-private const val USER_AGENT = "org.sinou.kotlin.android.sampleapp/v0.1.1 CellsAPI/v2"
+private const val USER_AGENT = "org.sinou.cells.kotlin.openapi.moshi/v0.1.1 CellsAPI/v2"
 private const val AUTH_HEADER = "Authorization"
 private const val USER_AGENT_HEADER = "User-Agent"
 private const val DEFAULT_TOKEN_TYPE = "Bearer"
@@ -40,12 +40,6 @@ fun getTestHttpClient(): OkHttpClient {
 
 fun pingServer(): Int {
     try {
-        //        val request = Request.Builder()
-        //            .url("http://localhost/index.htm")
-        //            .addHeader("Accept", "text/html")
-        //            .build()
-        //        val response = OkHttpClient.Builder().build().newCall(request).execute()
-
         val request = Request.Builder().url(SERVER_URL).build()
         val response = getTestHttpClient().newCall(request).execute()
         return response.code
@@ -96,4 +90,3 @@ private fun unsafeClientBuilder(): OkHttpClient.Builder {
         throw RuntimeException(e)
     }
 }
-
