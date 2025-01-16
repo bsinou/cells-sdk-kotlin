@@ -54,11 +54,8 @@ class BasicTest : ShouldSpec() {
                 found shouldBe true
                 foundUuid shouldNotBe null
 
-                val q3 = RestLookupRequest(locators = RestNodeLocators(listOf(
-                    RestNodeLocator(uuid = foundUuid, path = "common-files/*")
-                )))
-                val r3 = apiInstance.lookup(q3)
-                r3.nodes.size shouldBe 1
+                val r3 = apiInstance.getByUuid(uuid = foundUuid!!)
+                r3 shouldNotBe null
 //
 //
 //                val r4 = apiInstance.performAction(
