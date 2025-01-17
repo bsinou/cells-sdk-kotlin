@@ -8,6 +8,3 @@
 | **type** | [**TreeNodeType**](TreeNodeType.md) |  |  |
 | **contentType** | **kotlin.String** |  |  [optional] |
 | **templateUuid** | **kotlin.String** |  |  [optional] |
-
-
-

@@ -8,6 +8,3 @@
 | **dimension** | **kotlin.Int** |  |  [optional] |
 | **processing** | **kotlin.Boolean** |  |  [optional] |
 | **url** | **kotlin.String** |  |  [optional] |
-
-
-
